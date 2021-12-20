@@ -1,4 +1,5 @@
-# _Beego User Registration_ #
+# _Beego User Registration_
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/salmanprottoy/beego-user-registration#readme" target="_blank">
@@ -14,3 +15,12 @@
     <img alt="Visit: " src="https://badges.pufler.dev/visits/salmanprottoy/beego-user-registration" />
   </a>  
 </p>
+
+## Prerequisite
+
+- Go
+
+## Usage
+
+- Run `go mod tidy`
+- Run `bee run`
