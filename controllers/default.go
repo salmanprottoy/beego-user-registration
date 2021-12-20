@@ -14,14 +14,13 @@ import (
 type MainController struct {
 	beego.Controller
 }
-
 type Object struct {
-	FirstName   string `json:"FirstName"`
-	LastName    string `json:"LastName"`
-	Phone       string `json:"Phone"`
-	Email       string `json:"Email"`
-	Password    string `json:"Password"`
-	DateOfBrith string `json:"DateOfBrith"`
+	FirstName   string `valid:"Required" json:"FirstName"`
+	LastName    string `valid:"Required" json:"LastName"`
+	Phone       string `valid:"Required;Mobile" json:"Phone"`
+	Email       string `valid:"Required;Email" json:"Email"`
+	Password    string `valid:"Required" json:"Password"`
+	DateOfBrith string `valid:"Required" json:"DateOfBrith"`
 }
 
 func (c *MainController) Get() {
@@ -29,19 +28,14 @@ func (c *MainController) Get() {
 }
 
 func (c *MainController) Post() {
-	var obj Object
+
 	firstName := c.GetString("firstName")
 	lastName := c.GetString("lastName")
 	email := c.GetString("email")
 	phone := c.GetString("phone")
 	dob := c.GetString("dob")
 	password := c.GetString("password")
-	obj.FirstName = firstName
-	obj.LastName = lastName
-	obj.Email = email
-	obj.Phone = phone
-	obj.DateOfBrith = dob
-	obj.Password = password
+
 	//fmt.Println(obj)
 
 	postBody, _ := json.Marshal(map[string]string{
@@ -65,7 +59,8 @@ func (c *MainController) Post() {
 	}
 	sb := string(body)
 	log.Printf(sb)
-	//fmt.Println(postBody)
+	c.Data["Msg"] = sb
+	//fmt.Println(sb)
 
 	c.TplName = "index.tpl"
 }

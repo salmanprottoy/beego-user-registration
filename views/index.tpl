@@ -23,11 +23,18 @@
     <div >
     </div>
   </header>
+  <div class="container"> 
+    <div class="form-group text-center text-danger">
+        <p>{{.Msg}}</p>
+    </div>
+  </div>
+  
   <div class="container">
     <form action="/" method="post">
       <div class="form-group">
         <label for="firstName">First Name</label>
         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+        <small>{{.firstName}}</small>
       </div>
       <div class="form-group">
         <label for="lastName">First Name</label>
@@ -36,6 +43,7 @@
       <div class="form-group">
         <label for="email">Email address</label>
         <input type="email" class="form-control" id="email" name="email"  placeholder="Email">
+        <small>{{.email}}</small>
       </div>
       <div class="form-group">
         <label for="phone">Phone number</label>
@@ -49,8 +57,11 @@
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" name="password" placeholder="Password">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="text-center">
+            <button type="submit" class="btn btn-primary align-center">Submit</button>
+      </div>
     </form>
+    
   </div>
   <script src="/static/js/reload.min.js"></script>
 </body>
