@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>Beego</title>
+  <title>User Registration Form</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -34,7 +34,6 @@
       <div class="form-group">
         <label for="firstName">First Name</label>
         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
-        <small>{{.firstName}}</small>
       </div>
       <div class="form-group">
         <label for="lastName">First Name</label>
@@ -43,7 +42,6 @@
       <div class="form-group">
         <label for="email">Email address</label>
         <input type="email" class="form-control" id="email" name="email"  placeholder="Email">
-        <small>{{.email}}</small>
       </div>
       <div class="form-group">
         <label for="phone">Phone number</label>
